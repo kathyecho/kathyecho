@@ -1,0 +1,58 @@
+int x,c;
+void setup(){
+size(800,800);
+background(mouseY/3,mouseX/4,mouseY/5,5);
+//background(0,0,0);
+}
+void draw(){
+fill(c,c/2,c/3,10);
+rect(0,0,width,height);
+ellipse(x,x,10,10);
+ellipse(width-x,x,10,10);
+ellipse(x,height-x,10,10);
+ellipse(width-x,height-x,10,10);
+float y=1.5;
+strokeWeight(2);
+stroke(255);
+ellipse(400,400,800,800);
+line(400,0,x,x);
+line(0,400,x,x);
+line(800,400,x,x);
+line(400,800,x,x);
+line(146.45*0.8,146.45*0.8,x,x);
+line(853.55*0.8,146.45*0.8,x,x);
+line(853.55*0.8,853.55*0.8,x,x);
+line(146.45*0.8,853.55*0.8,x,x);
+line(400,0,width-x,x);
+line(0,400,width-x,x);
+line(800,400,width-x,x);
+line(400,800,width-x,x);
+line(146.45*0.8,146.45*0.8,width-x,x);
+line(853.55*0.8,146.45*0.8,width-x,x);
+line(853.55*0.8,853.55*0.8,width-x,x);
+line(146.45*0.8,853.55*0.8,width-x,x);
+line(400,0,width-x,height-x);
+line(0,400,width-x,height-x);
+line(800,400,width-x,height-x);
+line(400,800,width-x,height-x);
+line(146.45*0.8,146.45*0.8,width-x,height-x);
+line(853.55*0.8,146.45*0.8,width-x,height-x);
+line(853.55*0.8,853.55*0.8,width-x,height-x);
+line(146.45*0.8,853.55*0.8,width-x,height-x);
+line(400,0,x,height-x);
+line(0,400,x,height-x);
+line(800,400,x,height-x);
+line(400,800,x,height-x);
+line(146.45*0.8,146.45*0.8,x,height-x);
+line(853.55*0.8,146.45*0.8,x,height-x);
+line(853.55*0.8,853.55*0.8,x,height-x);
+line(146.45*0.8,853.55*0.8,x,height-x);
+x+=y;
+if(x>width){
+  x=0;
+}
+if(c>width/2){
+  c=0;}
+  c+=y;
+  saveFrame();
+}
